@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Create Form</h2>
+    <form method="post" action="{{ url_for('create_form') }}">
+        <div class="form-group">
+            <label for="title">Form Title:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="questions">Form Questions:</label>
+            <textarea id="questions" name="questions" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn">Create Form</button>
+        </div>
+    </form>
+</body>
+</html>

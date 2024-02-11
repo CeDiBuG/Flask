@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session</title>
+</head>
+<body>
+    <h1>Sessions</h1>
+    {% for s in object_list %}
+        <a href="{% url 'session' s.id %}">{{ s.name }}</a>
+    {% endfor %}
+</body>
+</html>

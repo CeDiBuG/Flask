@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+</head>
+<body>
+<div>
+    <h1>Bonjour {{ object.first_name }} {{ object.last_name }}</h1>
+</div>
+<div>
+    <a href="{% url 'teacher-session' object.id %}">Créer session</a>
+</div>
+<div>
+    <h2>Liste des sessions</h2>
+    {% for session in object.sessions.all %}
+        <a href="{% url 'session' session.id %}">{{ session.name }}</a>
+    {% endfor %}
+</div>
+</body>
+</html>

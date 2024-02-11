@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="static/css/style_menu.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="static/js/script_menu.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-icon">
+        <i class="fa fa-bars"></i>
+        </div>
+            <div class="navbar">
+                <div class="nav-mask"></div>
+                    <ul class="nav-menu">
+                        <li class="nav-toggle"><i class="fa fa-arrow-left"></i></li>
+                        <center>
+                         <h1 class="bottom">
+                             Ravis de te revoir {{session.username}}!!</br></br> Bienvenue sur la page d'acceuil...                 
+                        </h1></br></br></br>
+                        <li><a class="nav-link">Menu</a></li>
+                        <li><a class="nav-link">Formulaire</a></li>
+                        <li><a class="nav-link">Cours</a></li>
+                        <li><a class="nav-link" href="#contact">Contactez moi</a></li>
+                        <li><a class="Deconnexion" href="{{ url_for('logout') }}" class="btn">Deconnexion</a></li>
+                        </center>	
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <center>
+        <h2>Teacher Index</h2>
+        <a href="{{ url_for('create_form') }}" class="btn">Create Form</a>
+        <!-- Your other content here -->
+    </center>
+    <footer id="contact" class="contact wow fadeInUp slower">
+        <center>
+        <h2> Contactez moi ! </h2>
+        <div class="mail">
+            <i class="fa fa-envelope"></i>
+            <span class="info">email : </span> cedibug@gmail.com
+        </div>
+        <div class="form">
+             <a class="nav-link" href="/form"><i class="fa fa-id-card" aria-hidden="true"></i></a> ecrire un message
+        </div>
+        
+        </center>
+    </footer>
+</body>
+</html>

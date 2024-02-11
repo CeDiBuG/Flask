@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers list</title>
+</head>
+<body>
+<div>
+    {% for t in teachers %}
+        <div>{{ t.first_name }} {{ t.last_name }}</div>
+    {% endfor %}
+</div>
+</body>
+</html>

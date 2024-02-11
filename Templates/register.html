@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Enregistrement </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">              
+    </head>
+    <body></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h1 class="word">Enregistrement</h1>
+             </div></br></br></br>
+            <h2 class="word">
+                <form action="{{ url_for('register') }}" method="post">
+                  <div class="msg">{{ msg }}</div>
+                    <input id="username" name="username" type="text" placeholder="Entrez votre nom d'utilisateur" class="textbox"/></br></br>
+                    <input id="password" name="password" type="password" placeholder="Entrez votre mot de passe" class="textbox"/></br></br>
+                    <input id="email" name="email" type="text" placeholder="Entrez votre mail" class="textbox"/></br></br>
+                    <input type="submit" class="btn" value="Se connecter"></br></br>
+                </form>
+            </h2>
+            <p class="bottom">Vous avez deja un compte?  <a class="bottom" href="{{url_for('login')}}"> Connectez vous ici</a></p>
+          </div>
+        </div>
+    </body>
+</html>

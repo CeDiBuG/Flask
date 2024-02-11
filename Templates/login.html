@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Login </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h1 class="word">Login</h1>
+             </div></br></br></br>
+            <h2 class="word">
+                <form action="{{ url_for('login') }}" method="post">
+                  <div class="msg">{{ msg }}</div>
+                    <input id="username" name="username" type="text" placeholder="Entrez votre nom d'utilisateur" class="textbox"/></br></br>
+                    <input id="password" name="password" type="password" placeholder="Entrez votre mot de passe" class="textbox"/></br></br></br>
+                    <input type="submit" class="btn" value="Se connecter"></br></br>
+                </form>
+            </h2>
+            <p class="bottom">Pas encore chez nous?  <a class="bottom" href="{{url_for('register')}}"> Creer un compte</a></p>
+            <p class="bottom">Mot de passe oublié?  <a class="bottom" href="{{url_for('forgotpassword')}}"> Changez le ici</a></p>
+          </div>
+          <a class="bottom" href="{{url_for('teacher_login')}}"> Espace formateur</a>
+
+        </div>
+    </body>
+</html>
